@@ -1,5 +1,5 @@
 import { HardHat } from 'lucide-react'
-import { navLinks, LINKS } from '../data'
+import { navLinks, WHATSAPP_CONTACT } from '../data'
 
 export default function Navbar() {
   return (
@@ -32,12 +32,12 @@ export default function Navbar() {
 
         {/* CTA */}
         <a
-          href={LINKS.joinTeam}
+          href={WHATSAPP_CONTACT}
           target="_blank"
           rel="noopener noreferrer"
           className="hidden sm:inline-flex items-center gap-2 bg-[#0f172a] hover:bg-slate-800 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
         >
-          Join Our Team
+          Book a Consultation
         </a>
       </nav>
     </header>

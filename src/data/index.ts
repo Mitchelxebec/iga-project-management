@@ -10,6 +10,8 @@ import type { LucideIcon } from 'lucide-react'
 // ─── External links ───────────────────────────────────────────────────────────
 
 export const WHATSAPP_URL = 'https://whatsapp.com/channel/0029VbDVsHTI7BeHHv3Pp60T'
+export const WHATSAPP_CONTACT = 'https://wa.me/2348062326028'
+export const EMAIL = 'iga.projectmanagementfirm@gmail.com'
 
 export const LINKS = {
   joinTeam:    'https://docs.google.com/forms/d/e/1FAIpQLScrNzuiUxK4x6gj_0sGgaRqHbEeE7nWEWuzNoV8qmRFA7adYw/viewform?usp=header',

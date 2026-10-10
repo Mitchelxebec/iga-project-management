@@ -1,5 +1,5 @@
-import { ArrowRight } from 'lucide-react'
-import { WHATSAPP_URL } from '../data'
+import { ArrowRight, MessageCircle } from 'lucide-react'
+import { WHATSAPP_URL, WHATSAPP_CONTACT } from '../data'
 
 export default function Hero() {
   return (
@@ -38,7 +38,15 @@ export default function Hero() {
             ensure standard delivery and adherence to best practices.
           </p>
 
-          <div className="mt-9">
+          <div className="mt-9 flex flex-wrap gap-3">
+            <a
+              href={WHATSAPP_CONTACT}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
+            >
+              <MessageCircle size={15} /> Book a Consultation
+            </a>
             <a
               href={WHATSAPP_URL}
               target="_blank"
