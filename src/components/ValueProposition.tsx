@@ -1,5 +1,5 @@
-import { ArrowRight, CheckCircle2 } from 'lucide-react'
-import { commitments, WHATSAPP_URL } from '../data'
+import { ArrowRight, CheckCircle2, MessageCircle } from 'lucide-react'
+import { commitments, WHATSAPP_URL, WHATSAPP_CONTACT } from '../data'
 
 export default function ValueProposition() {
   return (
@@ -22,14 +22,24 @@ export default function ValueProposition() {
             professionals, and a dedicated follow-up process so clients
             never have to wonder what's happening on site.
           </p>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#0f172a] border border-slate-300 hover:border-[#0f172a] px-5 py-2.5 rounded-lg transition-colors"
-          >
-            Learn More <ArrowRight size={14} />
-          </a>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <a
+              href={WHATSAPP_CONTACT}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold bg-amber-500 hover:bg-amber-600 text-white px-5 py-2.5 rounded-lg transition-colors"
+            >
+              <MessageCircle size={14} /> Book a Consultation
+            </a>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#0f172a] border border-slate-300 hover:border-[#0f172a] px-5 py-2.5 rounded-lg transition-colors"
+            >
+              Learn More <ArrowRight size={14} />
+            </a>
+          </div>
         </div>
 
         {/* Right – checklist */}
