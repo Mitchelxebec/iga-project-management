@@ -6,15 +6,15 @@ export default function Services() {
     <section id="services" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-12">
-          <p className="text-xs font-semibold tracking-widest uppercase text-amber-500 mb-3">
+          <p className="text-xs font-semibold tracking-widest uppercase text-[#D6AA35] mb-3">
             What We Offer
           </p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f172a] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#09285D] tracking-tight">
             Our Core Services
           </h2>
-          <p className="mt-3 text-slate-500 text-sm max-w-xl leading-relaxed">
-            Six focused pillars covering every stage of a construction or
-            facility project from land acquisition to long-term management.
+          <p className="mt-3 text-[#667085] text-sm max-w-xl leading-relaxed">
+            Five focused pillars covering every stage of a construction or
+            facility project — from land acquisition to long-term management.
           </p>
         </div>
 
@@ -22,22 +22,23 @@ export default function Services() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="group bg-[#f8fafc] border border-slate-100 rounded-xl p-6 hover:border-slate-300 hover:shadow-sm transition-all duration-200 flex flex-col"
+              className="group bg-white border border-[#E2E6ED] rounded-xl p-6 hover:border-[#09285D]/30 hover:shadow-sm transition-all duration-200 flex flex-col"
             >
-              <span className="w-9 h-9 rounded-lg bg-[#0f172a] flex items-center justify-center mb-4">
-                <s.icon size={16} className="text-amber-400" strokeWidth={1.8} />
+              {/* Icon — royal blue bg */}
+              <span className="w-9 h-9 rounded-lg bg-[#176A9E]/10 flex items-center justify-center mb-4">
+                <s.icon size={16} className="text-[#176A9E]" strokeWidth={1.8} />
               </span>
-              <h3 className="text-sm font-bold text-[#0f172a] leading-snug mb-2">
+              <h3 className="text-sm font-bold text-[#09285D] leading-snug mb-2">
                 {s.title}
               </h3>
-              <p className="text-xs text-slate-500 leading-relaxed flex-1">
+              <p className="text-xs text-[#667085] leading-relaxed flex-1">
                 {s.description}
               </p>
               <a
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-1 text-xs font-semibold text-[#0f172a] hover:text-amber-600 transition-colors"
+                className="mt-5 inline-flex items-center gap-1 text-xs font-semibold text-[#09285D] hover:text-[#D6AA35] transition-colors"
               >
                 {s.cta} <ArrowRight size={12} />
               </a>
