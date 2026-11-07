@@ -38,7 +38,7 @@ export default function Hero() {
           <p className="mt-4 text-sm text-white/65 leading-relaxed max-w-xl">
             We connect professional Building Engineers and skilled Artisans with
             prospective clients who value quality and reliability. From land
-            acquisition to business consultation — we handle it with integrity.
+            acquisition to business consultation we handle it with integrity.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-3">
