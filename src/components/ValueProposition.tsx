@@ -27,7 +27,7 @@ export default function ValueProposition() {
               href={WHATSAPP_CONTACT}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-bold bg-[#D6AA35] hover:bg-[#c49b2e] text-[#09285D] px-5 py-2.5 rounded-lg transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-bold bg-[#25D366] hover:bg-[#1ebe5d] text-white px-5 py-2.5 rounded-lg transition-colors"
             >
               <MessageCircle size={14} /> Book a Consultation
             </a>

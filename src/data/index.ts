@@ -3,15 +3,19 @@ import {
   Building2,
   Users,
   Sparkles,
-  Home,
+  Scissors,
+  Briefcase,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
 // ─── External links ───────────────────────────────────────────────────────────
 
-export const WHATSAPP_URL = 'https://whatsapp.com/channel/0029VbDVsHTI7BeHHv3Pp60T'
+export const WHATSAPP_URL     = 'https://whatsapp.com/channel/0029VbDVsHTI7BeHHv3Pp60T'
 export const WHATSAPP_CONTACT = 'https://wa.me/2348062326028'
-export const EMAIL = 'iga.projectmanagementfirm@gmail.com'
+export const EMAIL            = 'iga.projectmanagementfirm@gmail.com'
+export const ADDRESS          = 'No 7 Umoren Close, Off Umoren Street, Uyo, Akwa Ibom State, Nigeria'
+export const PHONE_1          = '08062326028'
+export const PHONE_2          = '08153272954'
 
 export const LINKS = {
   joinTeam:    'https://docs.google.com/forms/d/e/1FAIpQLScrNzuiUxK4x6gj_0sGgaRqHbEeE7nWEWuzNoV8qmRFA7adYw/viewform?usp=header',
@@ -23,61 +27,71 @@ export const LINKS = {
   bookFacility:'https://docs.google.com/forms/d/e/1FAIpQLSfixsVAjDmySBh1oik5SiJOn089D9ljKj0Mhd23wO-i-c0kmw/viewform?usp=publish-editor',
 }
 
-// Navbar CTA and generic "Book a Consultation" fallback — kept as reference
-// export const BOOK_URL = LINKS.bookLand// ─── Types ────────────────────────────────────────────────────────────────────
+// ─── Types ────────────────────────────────────────────────────────────────────
 
 export interface Service {
   icon: LucideIcon
   title: string
   description: string
+  // href = Google Form URL, null = no form yet (show WhatsApp CTA instead)
+  href: string | null
   cta: string
-  href: string
 }
 
-// ─── Data ─────────────────────────────────────────────────────────────────────
+// ─── Services (6 — from registered flyer) ────────────────────────────────────
 
 export const services: Service[] = [
   {
     icon: MapPin,
-    title: 'Land Acquisition Assistant',
+    title: 'Land Acquisition Assistance',
     description:
-      'Expert guidance through land searches, verification, documentation, and acquisition.',
+      'Expert guidance through land searches, verification, documentation, and acquisition across Akwa Ibom and beyond.',
     cta: 'Book for Land Acquisition',
     href: LINKS.bookLand,
   },
   {
     icon: Building2,
-    title: 'House Construction & Project Management',
+    title: 'Building Project Supervision & General Project Management',
     description:
-      'End-to-end oversight of residential and commercial construction with accountability at every stage.',
+      'End-to-end oversight of residential and commercial construction projects with accountability at every stage.',
     cta: 'Book for Construction / PM',
     href: LINKS.bookConst,
   },
   {
-    icon: Users,
-    title: 'Linking Workers & General Staffing',
+    icon: Scissors,
+    title: 'Bush Clearing, Grass Cutting & Football Field Maintenance',
     description:
-      'Connecting clients with verified, skilled, and unskilled site workers matched to project needs.',
+      'Professional land clearing, grass cutting, and ongoing maintenance of football fields and open spaces.',
+    cta: 'Enquire via WhatsApp',
+    href: null,
+  },
+  {
+    icon: Users,
+    title: 'Linking Engineers, Artisans & Labourers to Clients',
+    description:
+      'Connecting clients directly with verified Engineers, skilled Artisans, and reliable labourers for any project scale.',
     cta: 'Book for Linking Workers',
     href: LINKS.bookLinking,
   },
   {
     icon: Sparkles,
-    title: 'Site Cleaning & Post-Construction',
+    title: 'Home, Facility, Schools & Industrial Cleaning and Fumigation',
     description:
-      'Professional finishing cleans, debris removal, and post-construction restoration services.',
+      'Thorough cleaning and fumigation services for homes, schools, offices, and industrial facilities.',
     cta: 'Book for Cleaning Service',
     href: LINKS.bookClean,
   },
   {
-    icon: Home,
-    title: 'Facility & Home Management',
+    icon: Briefcase,
+    title: 'Business Clinic, Referral, Training & Consultation',
     description:
-      'Ongoing maintenance, vendor coordination, and facility oversight for residential and commercial spaces.',
-    cta: 'Book for Facility / Home Management',
-    href: LINKS.bookFacility,
+      'Business advisory, professional referrals, skills training, and consultancy support for individuals and organisations.',
+    cta: 'Enquire via WhatsApp',
+    href: null,
   },
 ]
+
+// ─── Other data ───────────────────────────────────────────────────────────────
 
 export const commitments: string[] = [
   'Thorough vetting of every engineer and artisan on our roster',
@@ -89,8 +103,8 @@ export const commitments: string[] = [
 ]
 
 export const navLinks: { label: string; href: string }[] = [
-  { label: 'Services', href: '#services' },
-  { label: 'Our Process', href: '#process' },
+  { label: 'Services',      href: '#services' },
+  { label: 'Our Process',   href: '#process' },
   { label: 'Join as Talent', href: '#talent' },
   { label: 'Partner with Us', href: '#talent' },
 ]

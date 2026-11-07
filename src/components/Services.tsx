@@ -1,5 +1,5 @@
-import { ArrowRight } from 'lucide-react'
-import { services } from '../data'
+import { ArrowRight, MessageCircle } from 'lucide-react'
+import { services, WHATSAPP_CONTACT } from '../data'
 
 export default function Services() {
   return (
@@ -13,8 +13,9 @@ export default function Services() {
             Our Core Services
           </h2>
           <p className="mt-3 text-[#667085] text-sm max-w-xl leading-relaxed">
-            Five focused pillars covering every stage of a construction or
-            facility project — from land acquisition to long-term management.
+            Six pillars covering every stage of your project — from land
+            acquisition and construction to cleaning, staffing, and business
+            support.
           </p>
         </div>
 
@@ -24,7 +25,6 @@ export default function Services() {
               key={s.title}
               className="group bg-white border border-[#E2E6ED] rounded-xl p-6 hover:border-[#09285D]/30 hover:shadow-sm transition-all duration-200 flex flex-col"
             >
-              {/* Icon — royal blue bg */}
               <span className="w-9 h-9 rounded-lg bg-[#176A9E]/10 flex items-center justify-center mb-4">
                 <s.icon size={16} className="text-[#176A9E]" strokeWidth={1.8} />
               </span>
@@ -34,14 +34,27 @@ export default function Services() {
               <p className="text-xs text-[#667085] leading-relaxed flex-1">
                 {s.description}
               </p>
-              <a
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-1 text-xs font-semibold text-[#09285D] hover:text-[#D6AA35] transition-colors"
-              >
-                {s.cta} <ArrowRight size={12} />
-              </a>
+
+              {/* Cards with a form link get a booking CTA; others get WhatsApp */}
+              {s.href ? (
+                <a
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex items-center gap-1 text-xs font-semibold text-[#09285D] hover:text-[#D6AA35] transition-colors"
+                >
+                  {s.cta} <ArrowRight size={12} />
+                </a>
+              ) : (
+                <a
+                  href={WHATSAPP_CONTACT}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#25D366] hover:text-[#1ebe5d] transition-colors"
+                >
+                  <MessageCircle size={12} /> {s.cta}
+                </a>
+              )}
             </div>
           ))}
         </div>

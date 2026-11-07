@@ -1,12 +1,13 @@
-import { HardHat, Mail, MessageCircle } from 'lucide-react'
-import { LINKS, WHATSAPP_CONTACT, EMAIL } from '../data'
+import { HardHat, Mail, MessageCircle, Phone, MapPin } from 'lucide-react'
+import { LINKS, WHATSAPP_CONTACT, EMAIL, ADDRESS, PHONE_1, PHONE_2 } from '../data'
 
 const serviceLinks = [
-  'Land Acquisition',
-  'House Construction',
-  'Staffing & Linking',
-  'Site Cleaning',
-  'Facility Management',
+  'Land Acquisition Assistance',
+  'Building Project Supervision',
+  'Bush Clearing & Maintenance',
+  'Linking Engineers & Artisans',
+  'Cleaning & Fumigation',
+  'Business Clinic & Consultation',
 ]
 
 const companyLinks: { label: string; href: string }[] = [
@@ -27,14 +28,17 @@ export default function Footer() {
               <span className="w-8 h-8 rounded-md bg-white/10 flex items-center justify-center">
                 <HardHat size={16} className="text-[#D6AA35]" strokeWidth={2} />
               </span>
-              <span className="text-lg font-extrabold text-white">IGA</span>
-              <span className="text-[11px] font-medium text-white/40 border-l border-white/20 pl-2.5">
-                Project Management Firm
-              </span>
+              <div>
+                <p className="text-sm font-extrabold text-white leading-tight">IGA</p>
+                <p className="text-[10px] text-white/40 leading-tight">Project Management & Business Consults</p>
+              </div>
             </div>
+            <p className="text-xs font-semibold tracking-widest uppercase text-[#D6AA35]/70 mb-3">
+              AKS Integrity Labour Market
+            </p>
             <p className="text-sm text-white/55 leading-relaxed">
-              Connecting professional Building Engineers and skilled Artisans
-              with clients who value quality, reliability, and proper process.
+              Let's make things easier for you by managing your projects
+              and delivering successful results.
             </p>
           </div>
 
@@ -87,10 +91,22 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 text-sm text-white/55 hover:text-white transition-colors"
                 >
-                  <MessageCircle size={15} className="text-[#D6AA35] shrink-0 mt-0.5" />
+                  <MessageCircle size={15} className="text-[#25D366] shrink-0 mt-0.5" />
                   <span>
                     <span className="block text-xs text-white/35 mb-0.5">WhatsApp</span>
-                    0806 232 6028
+                    {PHONE_1}
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:${PHONE_2}`}
+                  className="flex items-start gap-3 text-sm text-white/55 hover:text-white transition-colors"
+                >
+                  <Phone size={15} className="text-[#D6AA35] shrink-0 mt-0.5" />
+                  <span>
+                    <span className="block text-xs text-white/35 mb-0.5">Phone</span>
+                    {PHONE_2}
                   </span>
                 </a>
               </li>
@@ -106,13 +122,20 @@ export default function Footer() {
                   </span>
                 </a>
               </li>
+              <li className="flex items-start gap-3 text-sm text-white/55">
+                <MapPin size={15} className="text-[#D6AA35] shrink-0 mt-0.5" />
+                <span>
+                  <span className="block text-xs text-white/35 mb-0.5">Address</span>
+                  {ADDRESS}
+                </span>
+              </li>
             </ul>
           </div>
 
         </div>
 
         <div className="pt-7 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/35">
-          <p>© {new Date().getFullYear()} IGA Project Management Firm. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} IGA Project Management & Business Consults. All rights reserved.</p>
           <p>Terms & Conditions apply to all engagements and partnerships.</p>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { navLinks, WHATSAPP_CONTACT } from '../data'
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 bg-[#09285D] border-b border-[#09285D] shadow-sm">
+    <header className="sticky top-0 z-50 bg-[#09285D] border-b border-white/10 shadow-sm">
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 group">
@@ -12,7 +12,7 @@ export default function Navbar() {
           </span>
           <span className="text-lg font-extrabold tracking-tight text-white">IGA</span>
           <span className="text-[11px] font-medium text-white/50 leading-tight hidden sm:block border-l border-white/20 pl-2.5">
-            Project<br />Management
+            Project Management<br />&amp; Business Consults
           </span>
         </a>
 
@@ -30,12 +30,12 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA — gold button, navy text */}
+        {/* CTA — WhatsApp green */}
         <a
           href={WHATSAPP_CONTACT}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden sm:inline-flex items-center gap-2 bg-[#D6AA35] hover:bg-[#c49b2e] text-[#09285D] text-sm font-bold px-5 py-2.5 rounded-lg transition-colors"
+          className="hidden sm:inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-colors"
         >
           Book a Consultation
         </a>
