@@ -1,19 +1,17 @@
-import { HardHat } from 'lucide-react'
 import { navLinks, WHATSAPP_CONTACT } from '../data'
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 bg-[#09285D] border-b border-white/10 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white border-b border-[#E2E6ED] shadow-sm">
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5 group">
-          <span className="w-8 h-8 rounded-md bg-white/10 flex items-center justify-center">
-            <HardHat size={16} className="text-[#D6AA35]" strokeWidth={2} />
-          </span>
-          <span className="text-lg font-extrabold tracking-tight text-white">IGA</span>
-          <span className="text-[11px] font-medium text-white/50 leading-tight hidden sm:block border-l border-white/20 pl-2.5">
-            Project Management<br />&amp; Business Consults
-          </span>
+
+        {/* Logo — navbar is white so the logo PNG sits perfectly */}
+        <a href="#" className="flex items-center group">
+          <img
+            src="/iga-logo.png"
+            alt="IGA Project Management & Business Consults"
+            className="h-12 w-auto object-contain"
+          />
         </a>
 
         {/* Links */}
@@ -22,7 +20,7 @@ export default function Navbar() {
             <li key={l.label}>
               <a
                 href={l.href}
-                className="text-sm font-medium text-white/70 hover:text-white transition-colors"
+                className="text-sm font-medium text-[#09285D]/70 hover:text-[#09285D] transition-colors"
               >
                 {l.label}
               </a>

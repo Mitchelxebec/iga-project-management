@@ -1,4 +1,4 @@
-import { HardHat, Mail, MessageCircle, Phone, MapPin } from 'lucide-react'
+import { Mail, MessageCircle, Phone, MapPin } from 'lucide-react'
 import { LINKS, WHATSAPP_CONTACT, EMAIL, ADDRESS, PHONE_1, PHONE_2 } from '../data'
 
 const serviceLinks = [
@@ -24,15 +24,13 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-2.5 mb-4">
-              <span className="w-8 h-8 rounded-md bg-white/10 flex items-center justify-center">
-                <HardHat size={16} className="text-[#D6AA35]" strokeWidth={2} />
-              </span>
-              <div>
-                <p className="text-sm font-extrabold text-white leading-tight">IGA</p>
-                <p className="text-[10px] text-white/40 leading-tight">Project Management & Business Consults</p>
-              </div>
-            </div>
+            <a href="#" className="inline-flex mb-5 group">
+              <img
+                src="/iga-logo.png"
+                alt="IGA Project Management & Business Consults"
+                className="h-20 w-auto object-contain bg-white rounded-xl p-2"
+              />
+            </a>
             <p className="text-xs font-semibold tracking-widest uppercase text-[#D6AA35]/70 mb-3">
               AKS Integrity Labour Market
             </p>
